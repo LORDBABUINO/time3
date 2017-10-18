@@ -12,23 +12,9 @@
 */
 
 Route::get('/', function () {
-
-    return view('index');
+    return view('welcome');
 });
 
 Auth::routes();
+
 Route::get('/home', 'HomeController@index')->name('home');
-
-#seção salas abaixo \/\/\/
-
-Route::get('/salas/cadastro', function () {
-
-    return view('salas/cadastroSalas');
-});
-
-
-Route::get('/salas/listar', function () {
-    return view('salas/listarSalas');});
-
-#seção salas acima /\/\/\
-
