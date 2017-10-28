@@ -19,6 +19,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/grade', 'CadastroGradeController@index')->name('grade');
 
 #seção salas abaixo \/\/\/
 
@@ -32,4 +33,3 @@ Route::get('/salas/listar', function () {
     return view('salas/listarSalas');});
 
 #seção salas acima /\/\/\
-
