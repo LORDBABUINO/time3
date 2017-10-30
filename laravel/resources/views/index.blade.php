@@ -65,14 +65,6 @@
         </style>
     </head>
     <body>
-
-
-
-<h1>Aplicação laravel:<br> Abaixo um link que leva a tela de listagem de salas</h1>
-Este arquivo deverá mudar para ser uma tela de login e apos usuario logado tambem uma tela principal da aplicação com menu.
-
-
-
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
@@ -87,14 +79,17 @@ Este arquivo deverá mudar para ser uma tela de login e apos usuario logado tamb
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Sistema de localização do IESB
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
                     
+                    <a href="salas/listar">Pesquise uma Sala ou Curso</a>
+                    <a href="campus/cadastro">Cadastrar um Campus</a>
+                    <a href="bloco">Cadastrar Bloco</a>
+                    <a href="rota">Cadastrar Rota</a>
+                    <a href="grade">Cadastrar Grade</a>
 
-<a href="salas/listar">Ir para tela de pesquisa de salas</a>
 
                     
                 </div>
