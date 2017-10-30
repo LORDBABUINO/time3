@@ -3,7 +3,7 @@
 
 @extends('base')
 
-@section('titulo', 'Sua Faculdade - Atas de Reunião')
+@section('titulo', 'Cadastro de Bloco')
 
 @section('conteudo')
 

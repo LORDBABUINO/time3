@@ -1,6 +1,6 @@
 @extends('base')
 
-@section('titulo', 'Sistema de Localização - Cadastro de Rotas')
+@section('titulo', 'Cadastro de Rotas')
 
 @section('conteudo')
 
