@@ -33,3 +33,7 @@ Route::get('/salas/listar', function () {
     return view('salas/listarSalas');});
 
 #seção salas acima /\/\/\
+
+Route::get('/bloco', 'BlocoController@index')->name('bloco');
+
+Route::get('/rota', 'RotaController@index')->name('rota');
