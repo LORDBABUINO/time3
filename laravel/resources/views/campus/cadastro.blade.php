@@ -78,11 +78,11 @@
 
         <hr />
 
-        <div class="row">
+      <div class="row">
             <div class="col-md-12">
-                <button type="submit" class="btn btn-primary">Salvar</button>
-                <button type="reset" class="btn btn-default">Limpar</button>
-                <a href="{{ url('/') }}" class="btn btn-default">Cancelar</a>
+                <button type="submit" class="btn btn-success">Salvar</button>
+                <button type="reset" class="btn btn-warning">Limpar</button>
+                <a href="{{ url('/') }}" class="btn btn-danger">Cancelar</a>
             </div>
         </div>
 
