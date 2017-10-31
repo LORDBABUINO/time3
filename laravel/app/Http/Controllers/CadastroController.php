@@ -4,11 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class CadastroController extends Controller
+class CadastroGradeController extends Controller
 {
+
+  public function __construct()
+  {
+      //$this->middleware('auth');
+  }
+
 
   public function index()
   {
-      return view('campus/cadastro');
+      return view('campus');
   }
 }

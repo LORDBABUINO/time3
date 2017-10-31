@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Sistema de Localização - IESB</title>
+        <title>Laravel</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -14,8 +14,8 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #f73333;
-                color: #fffcfc;
+                background-color: #fff;
+                color: #636b6f;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
                 height: 100vh;
@@ -51,7 +51,7 @@
             }
 
             .links > a {
-                color: #111111;
+                color: #636b6f;
                 padding: 0 25px;
                 font-size: 12px;
                 font-weight: 600;
@@ -73,26 +73,26 @@
                         <a href="{{ url('/home') }}">Home</a>
                     @else
                         <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Cadastre-se</a>
+                        <a href="{{ url('/register') }}">Register</a>
                     @endif
                 </div>
             @endif
 
             <div class="content">
                 <div class="title m-b-md">
-                    Sistema de Localização IESB
+                    Sistema de localização do IESB
                 </div>
 
                 <div class="links">
-                    
+
                     <a href="salas/listar">Pesquise uma Sala ou Curso</a>
                     <a href="campus/cadastro">Cadastrar um Campus</a>
                     <a href="bloco">Cadastrar Bloco</a>
                     <a href="rota">Cadastrar Rota</a>
                     <a href="grade">Cadastrar Grade</a>
+                    <a href="localizasala">Localizar Sala</a>  
 
 
-                    
                 </div>
             </div>
         </div>

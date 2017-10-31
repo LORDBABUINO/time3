@@ -82,9 +82,8 @@
 
         <div class="row">
             <div class="col-md-12">
-                <button type="submit" class="btn btn-success">Salvar</button>
-                <button type="reset" class="btn btn-warning">Limpar</button>
-                <a href="{{ url('/') }}" class="btn btn-danger">Cancelar</a>
+                <button type="submit" class="btn btn-primary">Salvar</button>
+                <a href="{{ url('/ata/listar') }}" class="btn btn-default">Cancelar</a>
             </div>
         </div>
     </form>

@@ -56,8 +56,8 @@
             <div class="form-group">
                 <label class="col-md-2 control-label" for="textinput">Cidade</label>
                 <div class="col-md-4">
-                    <input name="isbn" id="isbn" type="text" class="form-control input-md" required="">
-                    @if ($errors->has('isbn'))
+                    <input name="cidade" id="cidade" type="text" class="form-control input-md" required="">
+                    @if ($errors->has('cidade'))
                     <span class="help-block">
                         <strong>{{ $errors->first('isbn') }}</strong>
                     </span>
@@ -65,24 +65,24 @@
                 </div>
                 <label class="col-md-2 control-label" for="textinput">UF</label>
                 <div class="col-md-1">
-                    <input name="ano" id="ano" type="text" class="form-control input-md" maxlength="4" required="">
-                    @if ($errors->has('ano'))
+                    <input name="uf" id="uf" type="text" class="form-control input-md" maxlength="4" required="">
+                    @if ($errors->has('uf'))
                     <span class="help-block">
-                        <strong>{{ $errors->first('ano') }}</strong>
+                        <strong>{{ $errors->first('uf) }}</strong>
                     </span>
                     @endif
                 </div>
             </div>
-            
+
         </fieldset>
 
         <hr />
 
-      <div class="row">
+        <div class="row">
             <div class="col-md-12">
-                <button type="submit" class="btn btn-success">Salvar</button>
-                <button type="reset" class="btn btn-warning">Limpar</button>
-                <a href="{{ url('/') }}" class="btn btn-danger">Cancelar</a>
+                <button type="submit" class="btn btn-primary">Salvar</button>
+                <button type="reset" class="btn btn-default">Limpar</button>
+                <a href="{{ url('/') }}" class="btn btn-default">Cancelar</a>
             </div>
         </div>
 
@@ -90,4 +90,3 @@
 </div>
 
 @endsection
-

@@ -171,11 +171,21 @@
                     <!-- Authentication Links -->
                     @if (Auth::guest())
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="{{ route('login') }}">Login</a></li>
-                        <li><a href="{{ route('register') }}">Cadastre-se</a></li>
+                        <li><a href="{{ route('login') }}">Entrar</a></li>
+                        <li><a href="{{ route('register') }}">Registrar</a></li>
                     </ul>
                     @else
-                                        <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li><a href="{{ url('/curso') }}">Curso</a></li>
+                        <li><a href="{{ url('/ppc') }}">PPC</a></li>
+                        <li><a href="{{ url('/coordenador') }}">Coordenador</a></li>
+                        <li><a href="{{ url('/disciplina') }}">Disciplina</a></li>
+                        <li><a href="{{ url('/plano') }}">Plano de Ensino</a></li>
+                        <li><a href="{{ url('/atividades') }}">Cronograma de Atividades</a></li>
+                        <li><a href="{{ url('/bibliografia') }}">Bibliografia</a></li>
+                        <li><a href="{{ url('/ata') }}">Atas de Reunião</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                 <span class="glyphicon glyphicon-user" aria-hidden="true"></span>  {{ Auth::user()->name }} <span class="caret"></span>
