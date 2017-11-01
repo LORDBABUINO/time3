@@ -7,14 +7,8 @@ use Illuminate\Http\Request;
 class CadastroGradeController extends Controller
 {
 
-  public function __construct()
-  {
-      //$this->middleware('auth');
-  }
-
-
   public function index()
   {
-      return view('grade');
+      return view('grade/cadastro');
   }
 }
