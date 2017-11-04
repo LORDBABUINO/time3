@@ -39,12 +39,12 @@
                 font-family: 'Lato', serif;
             }
             .btn-primary{
-                background-color: #006b96;
+                background-color: #ad0d0d;
             }
             .navbar-default {
                 font-size: 1em;
                 font-weight: 400;
-                background-color: #ea071d;
+                background-color: #ad0d0d;
                 padding: 8px;
                 border: 0px;
                 border-radius: 0px;
@@ -69,7 +69,7 @@
             }
 
             .navbar-default .navbar-brand:hover {
-                color: #fff;
+                color: #ad0d0d;
                 text-shadow: 1px -1px 8px #b3e9ff;
             }
 
@@ -91,11 +91,11 @@
             }
 
             .navbar-default .navbar-toggle .icon-bar {
-                background-color: #fff;
+                background-color: #ad0d0d;
             }
 
             .dropdown-menu {
-                background-color: #006b96;
+                background-color: #ad0d0d;
                 color: white;
                 border: 0px;
                 border-radius: 2px;
@@ -175,16 +175,7 @@
                         <li><a href="{{ route('register') }}">Registrar</a></li>
                     </ul>
                     @else
-                    <ul class="nav navbar-nav">
-                        <li><a href="{{ url('/curso') }}">Curso</a></li>
-                        <li><a href="{{ url('/ppc') }}">PPC</a></li>
-                        <li><a href="{{ url('/coordenador') }}">Coordenador</a></li>
-                        <li><a href="{{ url('/disciplina') }}">Disciplina</a></li>
-                        <li><a href="{{ url('/plano') }}">Plano de Ensino</a></li>
-                        <li><a href="{{ url('/atividades') }}">Cronograma de Atividades</a></li>
-                        <li><a href="{{ url('/bibliografia') }}">Bibliografia</a></li>
-                        <li><a href="{{ url('/ata') }}">Atas de Reunião</a></li>
-                    </ul>
+                   
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -220,7 +211,7 @@
 
             <footer>
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-18">
                         <p>Copyright &copy; Sistema de Localização</p>
                     </div>
                 </div>

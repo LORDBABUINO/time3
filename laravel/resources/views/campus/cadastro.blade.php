@@ -1,6 +1,6 @@
 @extends('base')
 
-@section('titulo', 'Sistema de Localizacao - Cadastro de Cumpus')
+@section('titulo', 'Sistema de Localizacao - Cadastro de Campus')
 
 @section('conteudo')
 
@@ -89,4 +89,3 @@
     </form>
 </div>
 
-@endsection

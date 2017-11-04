@@ -124,8 +124,13 @@
       {{Form::select('sala', array('' => 'Selecione uma Sala'))}}
     </div>
   </div>
-  {{Form::submit('Salvar', array('class' => 'btn btn-primary'))}}
-  <a href="{{ url('/ata/listar') }}" class="btn btn-default">Cancelar</a>
+    <div class="col-md-12">
+                <button type="submit" class="btn btn-success">Salvar</button>
+                <button type="reset" class="btn btn-warning">Limpar</button>
+                <a href="{{ url('/') }}" class="btn btn-danger">Cancelar</a>
+            </div>
+
+
   {{Form::close()}}
 </div>
 @endsection

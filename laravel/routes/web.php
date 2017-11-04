@@ -37,6 +37,8 @@ Route::get('/salas/listar', function () {
 
 Route::get('/bloco', 'BlocoController@index')->name('bloco');
 
+Route::get('/localizar', 'LocalizarController@index')->name('localizar');
+
 Route::get('/rota', 'RotaController@index')->name('rota');
 #seção cadastro de campus abaixo \/\/\/\/
 Route::get('/campus/cadastro', function () {
@@ -45,5 +47,5 @@ Route::get('/campus/cadastro', function () {
 
 #seção cadastro de campus acima /\/\/\/\
 
-Route::get('/localizasala', function () {
-    return view('/localizasala');});
+Route::get('/cadastrarsala', function () {
+    return view('/cadastrarsala');});

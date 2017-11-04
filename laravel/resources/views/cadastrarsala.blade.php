@@ -35,7 +35,7 @@
 
 <div id="main" class="container-fluid">
 
-    <h3 class="page-header">Cadastro de Bloco</h3>
+    <h3 class="page-header">Cadastro de Salas</h3>
 
     @if ($errors->any())
     <ul class="alert alert-danger">
@@ -63,16 +63,40 @@
             </div>
 
             <div class="form-group">
-                <label class="col-md-2 control-label">Bloco</label>  
+                <label class="col-md-2 control-label">Bloco</label>
                 <div class="col-md-4">
-                    <input id="assunto" type="text" name="assunto" placeholder="Bloco" class="form-control" value="{{ old('assunto') }}">   
+                    <select id="sede" name="sede" class="form-control" value="{{ old('sede') }}">
+                        <option value="0">Selecione</option>
+                    </select>
                 </div>
             </div>
 
+            
             <div class="form-group">
-                <label class="col-md-2 control-label">Nº Andares</label>  
+                <label class="col-md-2 control-label">Andar</label>
                 <div class="col-md-4">
-                    <input id="assunto" type="text" name="assunto" placeholder="Nº Andares" class="form-control" value="{{ old('assunto') }}">   
+                    <select id="sede" name="sede" class="form-control" value="{{ old('sede') }}">
+                        <option value="0">Selecione</option>
+                        <option value="0">A</option>
+                        <option value="0">B</option>
+                        <option value="0">C</option>
+                    </select>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label class="col-md-2 control-label">Sala</label>  
+                <div class="col-md-4">
+                    <input id="assunto" type="text" name="assunto" placeholder="Digite o número da sala" class="form-control" value="{{ old('assunto') }}">   
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label class="col-md-2 control-label">Capacidade</label>  
+                <div class="col-md-4">
+                    <input id="assunto" type="text" name="assunto" placeholder="Capacidade de pessoas" class="form-control" value="{{ old('assunto') }}">   
                 </div>
             </div>
 

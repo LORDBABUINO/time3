@@ -1,4 +1,4 @@
-﻿@extends('base')
+﻿<!--@extends('base')-->
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Sistema de Localização</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -14,8 +14,8 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
-                color: #636b6f;
+                background-color: #ad0d0d;
+                color: #ad0d0d;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
                 height: 100vh;
@@ -51,9 +51,9 @@
             }
 
             .links > a {
-                color: #636b6f;
+                color: #0f0e0e;
                 padding: 0 25px;
-                font-size: 12px;
+                font-size: 16px;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
@@ -73,24 +73,27 @@
                         <a href="{{ url('/home') }}">Home</a>
                     @else
                         <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
+                        <a href="{{ url('/register') }}">Registrar</a>
                     @endif
                 </div>
             @endif
 
             <div class="content">
                 <div class="title m-b-md">
-                    Sistema de localização do IESB
+                    Sistema de localização IESB
                 </div>
 
                 <div class="links">
 
-                    <a href="salas/listar">Pesquise uma Sala ou Curso</a>
-                    <a href="campus/cadastro">Cadastrar um Campus</a>
+                    <!--<a href="salas/listar">Pesquise uma Sala ou Curso</a>-->
+                   
+                    <a href="localizar">Localizar</a> 
+                    <a href="campus/cadastro">Cadastrar Campus</a>
                     <a href="bloco">Cadastrar Bloco</a>
+                    <a href="cadastrarsala">Cadastrar Salas</a>
                     <a href="rota">Cadastrar Rota</a>
                     <a href="grade">Cadastrar Grade</a>
-                    <a href="localizasala">Localizar Sala</a>  
+                     
 
 
                 </div>

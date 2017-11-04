@@ -3,7 +3,7 @@
 
 @extends('base')
 
-@section('titulo', 'Cadastro de Bloco')
+@section('titulo', 'Localizar')
 
 @section('conteudo')
 
@@ -35,7 +35,7 @@
 
 <div id="main" class="container-fluid">
 
-    <h3 class="page-header">Cadastro de Bloco</h3>
+    <h3 class="page-header">Localizar</h3>
 
     @if ($errors->any())
     <ul class="alert alert-danger">
@@ -62,29 +62,53 @@
                 </div>
             </div>
 
-            <div class="form-group">
-                <label class="col-md-2 control-label">Bloco</label>  
+
+             <div class="form-group">
+                <label class="col-md-2 control-label">Destino</label>
                 <div class="col-md-4">
-                    <input id="assunto" type="text" name="assunto" placeholder="Bloco" class="form-control" value="{{ old('assunto') }}">   
+                    <select id="sede" name="sede" class="form-control" value="{{ old('sede') }}">
+                        <option value="0">Selecione</option>
+                        <option value="Campus Sul">Sala</option>
+                        <option value="Campus Norte">Secretaria</option>
+                        <option value="Campus Oeste">Biblioteca</option>
+                        <option value="Campus Oeste">Auditório</option>
+                        <option value="Campus Oeste">Bloco</option>
+                        <option value="Campus Oeste">FIES</option>
+                    </select>
                 </div>
             </div>
 
             <div class="form-group">
-                <label class="col-md-2 control-label">Nº Andares</label>  
+                <label class="col-md-2 control-label">Disciplina</label>  
                 <div class="col-md-4">
-                    <input id="assunto" type="text" name="assunto" placeholder="Nº Andares" class="form-control" value="{{ old('assunto') }}">   
+                    <input id="assunto" type="text" name="assunto" placeholder="Digite sua disciplina" class="form-control" value="{{ old('assunto') }}">   
                 </div>
             </div>
 
-                 </fieldset>
+
+            <div class="form-group">
+                <label class="col-md-2 control-label">Seu destino é:</label>
+                <div class="col-md-4">                     
+                    <textarea rows="3" class="form-control" name="deliberacao" id="deliberacao" value="{{ old('deliberacao') }}"></textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-2 control-label">Como chegar:</label>
+                <div class="col-md-4">                     
+                    <textarea rows="8" class="form-control" name="deliberacao" id="deliberacao" value="{{ old('deliberacao') }}"></textarea>
+                </div>
+            </div>
+
+         </fieldset>
 
         <hr />
 
         <div class="row">
             <div class="col-md-12">
-                <button type="submit" class="btn btn-success">Salvar</button>
+                <button type="submit" class="btn btn-success">Localizar</button>
                 <button type="reset" class="btn btn-warning">Limpar</button>
-                <a href="{{ url('/') }}" class="btn btn-danger">Cancelar</a>
+                <a href="{{ url('/') }}" class="btn btn-danger">Voltar</a>
             </div>
         </div>
     </form>
