@@ -40,10 +40,12 @@ Route::get('/bloco', 'BlocoController@index')->name('bloco');
 Route::get('/localizar', 'LocalizarController@index')->name('localizar');
 
 Route::get('/rota', 'RotaController@index')->name('rota');
+
 #seção cadastro de campus abaixo \/\/\/\/
 Route::get('/campus/cadastro', function () {
     return view('/campus/cadastro');});
-
+														Route::get('/menu', function () {
+    													return view('/menu');});
 
 #seção cadastro de campus acima /\/\/\/\
 

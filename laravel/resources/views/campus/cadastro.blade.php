@@ -1,6 +1,6 @@
 @extends('base')
 
-@section('titulo', 'Sistema de Localizacao - Cadastro de Campus')
+@section('titulo', 'Sistema de Localizacao - Cadastro de Cumpus')
 
 @section('conteudo')
 
@@ -56,8 +56,8 @@
             <div class="form-group">
                 <label class="col-md-2 control-label" for="textinput">Cidade</label>
                 <div class="col-md-4">
-                    <input name="cidade" id="cidade" type="text" class="form-control input-md" required="">
-                    @if ($errors->has('cidade'))
+                    <input name="isbn" id="isbn" type="text" class="form-control input-md" required="">
+                    @if ($errors->has('isbn'))
                     <span class="help-block">
                         <strong>{{ $errors->first('isbn') }}</strong>
                     </span>
@@ -65,15 +65,15 @@
                 </div>
                 <label class="col-md-2 control-label" for="textinput">UF</label>
                 <div class="col-md-1">
-                    <input name="uf" id="uf" type="text" class="form-control input-md" maxlength="4" required="">
-                    @if ($errors->has('uf'))
+                    <input name="ano" id="ano" type="text" class="form-control input-md" maxlength="4" required="">
+                    @if ($errors->has('ano'))
                     <span class="help-block">
-                        <strong>{{ $errors->first('uf) }}</strong>
+                        <strong>{{ $errors->first('ano') }}</strong>
                     </span>
                     @endif
                 </div>
             </div>
-
+            
         </fieldset>
 
         <hr />
@@ -88,4 +88,6 @@
 
     </form>
 </div>
+
+@endsection
 
