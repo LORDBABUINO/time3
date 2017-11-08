@@ -87,10 +87,10 @@
 
                     <!--<a href="salas/listar">Pesquise uma Sala ou Curso</a>-->
                    
-                    <a href="localizar">Localizar</a> 
+                    <a href="salas/listar">Localizar</a> 
                     <a href="campus/cadastro">Cadastrar Campus</a>
                     <a href="bloco">Cadastrar Bloco</a>
-                    <a href="cadastrarsala">Cadastrar Salas</a>
+                    <a href="salas/cadastro">Cadastrar Salas</a>
                     <a href="rota">Cadastrar Rota</a>
                     <a href="grade">Cadastrar Grade</a>
                      

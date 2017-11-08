@@ -1,7 +1,11 @@
-﻿<html>
+﻿
 
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+@extends('base')
+
+@section('titulo', 'Cadastro de Salas')
+
+@section('conteudo')
 
 
 <form action="listar">
@@ -63,5 +67,5 @@
 </div>
 </div>
 </form>
+@endsection
 
-</html>
