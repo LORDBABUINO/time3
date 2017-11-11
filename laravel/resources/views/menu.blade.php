@@ -1,4 +1,4 @@
-﻿<!--@extends('base')-->
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -86,9 +86,13 @@
                 <div class="links">
 
                     <!--<a href="salas/listar">Pesquise uma Sala ou Curso</a>-->
-
-                    <a href="salas/listar">Localize sua sala</a>
-
+                   
+                    <a href="campus/cadastro">Cadastrar Campus</a>
+                    <a href="bloco">Cadastrar Bloco</a>
+                    <a href="salas/cadastro">Cadastrar Salas</a>
+                    <a href="rota">Cadastrar Rota</a>
+                    <a href="grade">Cadastrar Grade</a>
+                     
 
 
                 </div>
@@ -96,3 +100,4 @@
         </div>
     </body>
 </html>
+
