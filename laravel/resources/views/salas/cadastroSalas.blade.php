@@ -61,7 +61,7 @@
             <input class="glyphicon glyphicon-align-left" id="capacidade_sala" >
         </div>
     </fieldset>
-    <input type="button" class="btn btn-danger" value="Desistir" action="listar">
+    <a class="btn btn-danger" href="/home">Desistir</a>
     <input type="submit" class="btn btn-danger">
 </div>
 </div>
