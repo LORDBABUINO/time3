@@ -15,121 +15,141 @@
   </ul>
   @endif
 
-  {{Form::open(array('url' => '/grade/salvar', 'class' => 'form-horizontal'))}}
+  {{Form::open(['url' => '/grade/salvar', 'class' => 'form-horizontal'])}}
 
   <div class="form-group">
     {{Form::label(
-      'semestre-label',
+      'semestre',
       'Semestre Atual:',
-      array('class' => 'col-md-2 control-label')
+      ['class' => 'col-md-2 control-label']
     )}}
     <div class="col-md-4">
       {{Form::text(
         'semestre',
         null,
-        array('required', 'class' => 'form-control')
+        ['required', 'class' => 'form-control']
       )}}
     </div>
   </div>
   <div class="form-group">
     {{Form::label(
-      'curso-label',
+      'curso',
       'Curso:',
-      array('class' => 'col-md-2 control-label')
+      ['class' => 'col-md-2 control-label']
     )}}
     <div class="col-md-4">
       {{Form::select(
         'curso',
-        array('' => 'Selecione um Curso'),
-        array('required', 'class' => 'form-control')
+        ['' => 'Selecione um Curso'],
+        null,
+        ['class' => 'form-control col-md-4']
       )}}
     </div>
   </div>
   <div class="form-group">
     {{Form::label(
-      'disciplina-label',
+      'disciplina',
       'Disciplina:',
-      array('class' => 'col-md-2 control-label')
+      ['class' => 'col-md-2 control-label']
     )}}
     <div class="col-md-4">
       {{Form::select(
         'disciplina',
-        array('' => 'Selecione uma Disciplina')
+        ['' => 'Selecione uma Disciplina'],
+        null,
+        ['class' => 'form-control col-md-4']
       )}}
     </div>
   </div>
   <div class="form-group">
     {{Form::label(
-      'aula-label',
+      'aula',
       'Dias de Aula:',
-      array('class' => 'col-md-2 control-label')
+      ['class' => 'col-md-2 control-label']
     )}}
-    <div class="col-md-4">
-      {{Form::label('Segunda:')}}
-      {{Form::checkbox('S', 'segunda')}}
-      {{Form::label('Terça:')}}
-      {{Form::checkbox('T', 'terca')}}
-      {{Form::label('Quarta:')}}
-      {{Form::checkbox('Q', 'quarta')}}
-      {{Form::label('Quinta:')}}
-      {{Form::checkbox('Q', 'quinta')}}
-      {{Form::label('Sexta:')}}
-      {{Form::checkbox('S', 'sexta')}}
-      {{Form::label('Sábado:')}}
-      {{Form::checkbox('S', 'sabado')}}
+    <div class="col-md-8">
+      @foreach($WEEK as $label => $value)
+        <div class="col-sm-2">
+          {{Form::label($value, $label . ':')}}
+          {{Form::checkbox(
+            'grade',
+            $value,
+            null,
+            ['id' => $value])
+          }}
+        </div>
+      @endforeach
     </div>
   </div>
   <div class="form-group">
     {{Form::label(
-      'turno-label',
+      'turno',
       'Turno:',
-      array('class' => 'col-md-2 control-label')
+      ['class' => 'col-md-2 control-label']
     )}}
     <div class="col-md-4">
-      {{Form::label('Matutino:')}}
-      {{Form::radio('turno', 'matutino')}}
-      {{Form::label('Vespertino:')}}
-      {{Form::radio('turno', 'vespertino')}}
-      {{Form::label('Noturno:')}}
-      {{Form::radio('turno', 'noturno')}}
+      @foreach($TURNS as $label => $value)
+        <div class="col-sm-4">
+          {{Form::label($value, $label . ':')}}
+          {{Form::radio(
+            'turnos',
+            $value,
+            null,
+            ['id' => $value]
+          )}}
+        </div>
+      @endforeach
     </div>
   </div>
   <div class="form-group">
     {{Form::label(
-      'campus-label',
+      'campus',
       'Campus:',
-      array('class' => 'col-md-2 control-label')
+      ['class' => 'col-md-2 control-label']
     )}}
     <div class="col-md-4">
-      {{Form::select('campus', array('' => 'Selecione um Campus'))}}
+      {{Form::select(
+        'campus',
+        ['' => 'Selecione um Campus'],
+        null,
+        ['class' => 'form-control col-md-4']
+      )}}
     </div>
   </div>
   <div class="form-group">
     {{Form::label(
       'bloco',
       'Bloco:',
-      array('class' => 'col-md-2 control-label')
+      ['class' => 'col-md-2 control-label']
     )}}
     <div class="col-md-4">
-      {{Form::select('bloco', array('' => 'Selecione um Bloco'))}}
+      {{Form::select(
+        'bloco',
+        ['' => 'Selecione um Bloco'],
+        null,
+        ['class' => 'form-control col-md-4']
+      )}}
     </div>
   </div>
   <div class="form-group">
     {{Form::label(
-      'sala-label',
+      'sala',
       'Sala:',
-      array('class' => 'col-md-2 control-label')
+      ['class' => 'col-md-2 control-label']
     )}}
     <div class="col-md-4">
-      {{Form::select('sala', array('' => 'Selecione uma Sala'))}}
+      {{Form::select(
+        'sala', ['' => 'Selecione uma Sala'],
+        null,
+        ['class' => 'form-control col-md-4']
+      )}}
     </div>
   </div>
     <div class="col-md-12">
-                <button type="submit" class="btn btn-success">Salvar</button>
-                <button type="reset" class="btn btn-warning">Limpar</button>
-                <a href="{{ url('/') }}" class="btn btn-danger">Cancelar</a>
-            </div>
-
+      {{Form::submit('Salvar', ['class' => 'btn btn-success'])}}
+      {{Form::reset('Limpar', ['class' => 'btn btn-warning'])}}
+      <a href="{{ url('/') }}" class="btn btn-danger">Cancelar</a>
+    </div>
 
   {{Form::close()}}
 </div>
