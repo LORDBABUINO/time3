@@ -1,6 +1,6 @@
 @extends('base')
 
-@section('titulo', 'Sistema de Localizacao - Cadastro de Cumpus')
+@section('titulo', 'Sistema de Localizacao - Cadastro de Campus')
 
 @section('conteudo')
 
@@ -84,6 +84,10 @@
 
                     </div>
                 </div>
+<<<<<<< HEAD:laravel/resources/views/campus/criar.blade.php
+=======
+            </div>
+>>>>>>> master:laravel/resources/views/campus/cadastro.blade.php
 
         </fieldset>
 
@@ -101,4 +105,3 @@
 </div>
 
 @endsection
-
