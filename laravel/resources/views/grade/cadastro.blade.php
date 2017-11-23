@@ -24,10 +24,10 @@
       ['class' => 'col-md-2 control-label']
     )}}
     <div class="col-md-4">
-      {{Form::text(
+      {{Form::number(
         'semestre',
         null,
-        ['required', 'class' => 'form-control']
+        ['class' => 'form-control']
       )}}
     </div>
   </div>

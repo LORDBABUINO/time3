@@ -19,7 +19,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
 Route::get('/grade', 'CadastroGradeController@index')->name('grade');
+Route::post('/grade/salvar', 'CadastroGradeController@store');
 
 #seção salas abaixo \/\/\/
 
