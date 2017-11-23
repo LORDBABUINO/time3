@@ -96,7 +96,7 @@
 
             .dropdown-menu {
                 background-color: #ad0d0d;
-                color: white;
+                color: blue;
                 border: 0px;
                 border-radius: 2px;
                 padding-top: 10px;
@@ -173,6 +173,9 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="{{ route('login') }}">Entrar</a></li>
                         <li><a href="{{ route('register') }}">Registrar</a></li>
+                       
+                    
+                </div>
                     </ul>
                     @else
                    
@@ -195,6 +198,8 @@
                                     </form>
                                 </li>
                             </ul>
+                            <li><a href="{{ url('/home') }}">Menu</a></li>
+                            <li><a href="{{ url('/') }}">Inicio</a></li>
                         </li>
                     </ul>
                     @endif

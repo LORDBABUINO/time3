@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -14,8 +13,8 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
-                color: #636b6f;
+                background-color: #ad0d0d;
+                color: #ad0d0d;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
                 height: 100vh;
@@ -51,9 +50,9 @@
             }
 
             .links > a {
-                color: #636b6f;
+                color: #0f0e0e;
                 padding: 0 25px;
-                font-size: 12px;
+                font-size: 16px;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
@@ -70,7 +69,8 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @if (Auth::check())
-                        <a href="{{ url('/home') }}">Admin</a>
+                        
+                        <a href="{{ url('/') }}">Inicio</a>
                     @else
                         <a href="{{ url('/login') }}">Login</a>
                         <a href="{{ url('/register') }}">Registrar</a>
@@ -80,35 +80,23 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Sistema de localização
+                    Cadastros
                 </div>
 
                 <div class="links">
 
-                    <!--<a href="salas/listar">Pesquise uma Sala ou Curso</a>-->
                    
-                    <a href="salas/listar">Localize sua sala</a>
-                    <a href="salas/listar">Pesquise sua Grade</a>
-                                     
+                    <a href="campus/listar">Campus</a>
+                    <a href="bloco">Bloco</a>
+                    <a href="salas/cadastro">Salas</a>
+                    <a href="rota">Rota</a>
+                    <a href="grade">Grade</a>
+                     
 
 
                 </div>
             </div>
         </div>
     </body>
-    <div class="container"> <!-- inicio container -->
-
-            @yield('conteudo')
-
-            <hr>
-
-            <footer>
-                <div class="row">
-                    <div class="col-lg-18">
-                        <p>Copyright &copy; Sistema de Localização</p>
-                    </div>
-                </div>
-            </footer>
-
-        </div><!-- fim container -->
 </html>
+

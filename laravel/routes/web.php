@@ -21,6 +21,11 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/grade', 'CadastroGradeController@index')->name('grade');
 
+
+
+//Route::get('/curso/criar', function () {
+    //return view('curso/criar');});
+
 #seção salas abaixo \/\/\/
 
 Route::get('/salas/cadastro', function () {
@@ -35,19 +40,28 @@ Route::get('/salas/listar', function () {
 
 #seção salas acima /\/\/\
 
+
+Route::group(['prefix' => 'campus'], function () {
+	Route::get('criar',"CampusController@criar");
+	Route::get('listar',"CampusController@listar");
+	Route::get('editar/{id}',"CampusController@editar");
+	Route::get('remover/{id}',"CampusController@remover");
+	Route::post('salvar',"CampusController@salvar");
+});
+
+
+
+
+
+
 Route::get('/bloco', 'BlocoController@index')->name('bloco');
 
 Route::get('/localizar', 'LocalizarController@index')->name('localizar');
 
 Route::get('/rota', 'RotaController@index')->name('rota');
 
-#seção cadastro de campus abaixo \/\/\/\/
-Route::get('/campus/cadastro', function () {
-    return view('/campus/cadastro');});
-														Route::get('/menu', function () {
-    													return view('/menu');});
 
-#seção cadastro de campus acima /\/\/\/\
 
 Route::get('/cadastrarsala', function () {
     return view('/cadastrarsala');});
+
