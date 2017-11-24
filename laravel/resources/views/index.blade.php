@@ -88,12 +88,12 @@
                     <!--<a href="salas/listar">Pesquise uma Sala ou Curso</a>-->
 
                     <a href="salas/listar">Localize sua sala</a>
-<<<<<<< HEAD
+
                     <a href="salas/listar">Pesquise sua Grade</a>
                                      
-=======
 
->>>>>>> master
+
+
 
 
                 </div>

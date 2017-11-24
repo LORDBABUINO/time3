@@ -1,4 +1,4 @@
-@extends('base')
+@extends('menu')
 
 @section('titulo', 'Campus Listar')
 
@@ -39,7 +39,7 @@
                 <td>{{$campuss->campus_uf}}</td>
 
                 <td><a class="btn btn-warning btn-xs" href="/campus/editar/<?php echo $campuss->id; ?>">Editar</a>
-                    <a class="btn btn-danger btn-xs" href= >Excluir</a>
+                    <a class="btn btn-danger btn-xs" href="/campus/remover/<?php echo $campuss->id; ?>" onclick="return confirm('Deseja remover o Campus <?php echo $campuss->curso_nome; ?>?');">Remover</a>
 
 
                 </td>
