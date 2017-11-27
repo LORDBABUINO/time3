@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -179,13 +180,16 @@
                     </ul>
                     @else
                    
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
+                    <ul class="nav navbar-nav navbar-right">  
+                     <li><a href="{{ url('/home') }}">Menu</a></li>
+                            <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                 <span class="glyphicon glyphicon-user" aria-hidden="true"></span>  {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
 
                             <ul class="dropdown-menu" role="menu">
+                             
+                                
                                 <li>
                                     <a href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
@@ -198,8 +202,7 @@
                                     </form>
                                 </li>
                             </ul>
-                            <li><a href="{{ url('/home') }}">Menu</a></li>
-                            <li><a href="{{ url('/') }}">Inicio</a></li>
+                            
                         </li>
                     </ul>
                     @endif
@@ -207,6 +210,12 @@
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav><!-- /.final-navbar -->
+
+
+
+
+
+
 
         <div class="container"> <!-- inicio container -->
 

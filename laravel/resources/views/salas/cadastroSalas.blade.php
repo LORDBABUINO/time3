@@ -1,7 +1,7 @@
 ﻿
 
 
-@extends('base')
+@extends('menu')
 
 @section('titulo', 'Cadastro de Salas')
 
