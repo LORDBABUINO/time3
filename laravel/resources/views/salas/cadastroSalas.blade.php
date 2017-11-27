@@ -73,4 +73,7 @@
 </div>
 </div>
 </form>
+<form action="/blocos/cria" method="get">
+    <input type="submit" value="Cria um bloco para teste">
+</form>
 @endsection

@@ -24,7 +24,7 @@
     <legend class="align-middle">Edição de salas</legend>
         <div class="col-4">
             <label class="form-check-label">Selecione o campus:
-                <select id="campus_select" value="{{$sala->campus()->id}}" name="campus">
+                <select id="campus_select" value="{{$sala->campus->id}}" name="campus">
                     @foreach ($campus as $cmp)
                         <option value="{{ $cmp->id }}">{{ $cmp->campus_nome }}</option>
                     @endforeach
@@ -33,7 +33,7 @@
         </div>
         <div class="form-check">
             <label class="form-check-label">Bloco:
-                <select id="bloco_select" value="{{ $sala->bloco()->id }}" name="bloco" >
+                <select id="bloco_select" value="{{ $sala->bloco->id }}" name="bloco" >
                     @foreach ($bloco as $blc)
                         <option value="{{ $blc->id }}">{{ $blc->nome }}</option>
                     @endforeach
@@ -72,5 +72,8 @@
 </div>
 </div>
 </div>
+</form>
+<form action="/blocos/cria" method="get">
+    <input type="submit" value="Cria um bloco para teste">
 </form>
 @endsection
