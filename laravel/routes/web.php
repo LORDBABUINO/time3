@@ -30,15 +30,20 @@ Route::post('/grade/salvar', 'CadastroGradeController@store');
 
 #seção salas abaixo \/\/\/
 
-Route::get('/salas/cadastro', function () {
+Route::group(['prefix' => '/salas'], function(){
+    Route::get('listar', "SalasController@listar");
+    Route::post('listar', "SalasController@procurar");
+    Route::get('cadastro', "SalasController@cadastro");
+    Route::get('remover/{id}', "SalasController@remover");
+    Route::get('editar/{id}', "SalasController@editar" );
+    Route::post('salvar', "SalasController@salvar");
 
-    return view('salas/cadastroSalas');
 });
 
+Route::group(['prefix' => '/blocos'], function(){
+Route::get('cria', "BlocoController@index");
 
-Route::get('/salas/listar', function () {
-    return view('salas/listarSalas');});
-
+});
 
 #seção salas acima /\/\/\
 
