@@ -9,7 +9,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <link rel="icon" href="/favicon.ico">
-        <link rel="shortcut icon" href="<?php echo url('/img/logo_aba.png') ?>" type="image/x-icon">
+
 
         <title>@yield('titulo')</title>
 
@@ -38,6 +38,7 @@
 
             html, body {
                 font-family: 'Lato', serif;
+                 height: 100%;
             }
             .btn-primary{
                 background-color: #006b96;
@@ -185,6 +186,8 @@
 
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
+                        <li><a href="{{ url('/') }}">Inicio</a></li>
+                        <li><a href="{{ url('/home') }}">Admin</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                 <span class="glyphicon glyphicon-user" aria-hidden="true"></span>  {{ Auth::user()->name }} <span class="caret"></span>
@@ -206,7 +209,6 @@
 
                             </ul>
 
-                             <li><a href="{{ url('/') }}">Inicio</a></li>
                         </li>
 
                     </ul>

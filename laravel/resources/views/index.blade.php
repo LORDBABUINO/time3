@@ -14,9 +14,12 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+               background-image: url("/img/logo_inicio.png");
+                background-repeat: no-repeat;
+                background-position: right;
+                background-size: 800px, 800px;
                 color: #636b6f;
-                font-family: 'Raleway', sans-serif;
+                font-family: 'Loto', sans-serif;
                 font-weight: 100;
                 height: 100vh;
                 margin: 0;
@@ -52,8 +55,8 @@
 
             .links > a {
                 color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
+                padding: 0 15px;
+                font-size: 20px;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
@@ -61,7 +64,7 @@
             }
 
             .m-b-md {
-                margin-bottom: 30px;
+                margin-bottom: 100px;
             }
         </style>
     </head>
@@ -90,10 +93,6 @@
                     <a href="salas/listar">Localize sua sala</a>
 
                     <a href="salas/listar">Pesquise sua Grade</a>
-                                     
-
-
-
 
 
                 </div>

@@ -4,10 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Salas extends Model
+class Bloco extends Model
 {
     //
-    protected $table = 'salas';
 
     
     const CREATED_AT = 'created_at';
@@ -24,11 +23,6 @@ class Salas extends Model
         'nome' => 'text',
     ];
     
-    protected $maps =[
-        'descricao' => 'salas_descricao',
-        'nome' => 'salas_nome',
-];
-
     public function rota()
     {
         return $this->hasMany('App\Rota');
@@ -36,11 +30,10 @@ class Salas extends Model
     
     public function campus()
     {
-        return $this->belongsTo('App\Campus','salas_fk_campuss');
+        return $this->belongsTo('App\Campus','bloco_fk_campus');
     }
-    public function bloco()
+    public function salas()
     {
-        return $this->belongsTo('App\Bloco','salas_fk_blocos');
+        return $this->hasMany('App\Salas');
     }
-
 }

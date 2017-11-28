@@ -1,9 +1,9 @@
 ﻿
 
 
-@extends('menu')
+@extends('base')
 
-@section('titulo', 'Cadastro de Salas')
+@section('titulo', 'Editar Salas')
 
 @section('conteudo')
 
@@ -21,10 +21,10 @@
 <div class="row justify-content-center">
 <div class="col-4">
     <fieldset class="form-group" >
-    <legend class="align-middle">Cadastro de salas</legend>
+    <legend class="align-middle">Edição de salas</legend>
         <div class="col-4">
             <label class="form-check-label">Selecione o campus:
-                <select id="campus_select" value="0" name="campus">
+                <select id="campus_select" value="{{$sala->campus->id}}" name="campus">
                     @foreach ($campus as $cmp)
                         <option value="{{ $cmp->id }}">{{ $cmp->campus_nome }}</option>
                     @endforeach
@@ -33,7 +33,7 @@
         </div>
         <div class="form-check">
             <label class="form-check-label">Bloco:
-                <select id="bloco_select" value="0" name="bloco" >
+                <select id="bloco_select" value="{{ $sala->bloco->id }}" name="bloco" >
                     @foreach ($bloco as $blc)
                         <option value="{{ $blc->id }}">{{ $blc->nome }}</option>
                     @endforeach
@@ -59,12 +59,12 @@
         </div>
         -->
         <div class="form-group">
-            <label for="nomeDaSala">Nome da sala:</label>
-            <input type="text" class="glyphicon glyphicon-align-left" id="nomeDaSala" name="nome" placeholder="AA1">
+            <label for="nome">Nome da sala:</label>
+            <input type="text" class="glyphicon glyphicon-align-left" id="nomeDaSala" name="nome" placeholder="AA1" value="{{ $sala->nome}}">
         </div>
         <div class="form-group">
-            <label for="Capacidade">Descrição:</label>
-            <input class="glyphicon glyphicon-align-left" name="descricao" id="desc" >
+            <label for="Descricao">Descrição:</label>
+            <input class="glyphicon glyphicon-align-left" name="descricao" id="desc" value="{{ $sala->descricao}}">
         </div>
     </fieldset>
     <a class="btn btn-danger" href="/home">Desistir</a>
