@@ -36,15 +36,25 @@ public function listar(){
 }
 
 public function criar(){
+
 	$campus = collect(['' => 'Selecione um Campus'])->merge(
 		DB::table('campuss')->pluck('campus_nome', 'id')
 	);
+	$bloco = collect(['' => 'Selecione um Bloco'])->merge(
+		DB::table('blocos')->pluck('nome', 'id')
+	);
+	$sala = collect(['' => 'Selecione uma Sala'])->merge(
+		DB::table('salas')->pluck('nome', 'id')
+	);
+
 	return view('grade/criar',
 	[
 		'WEEK' => self::WEEK,
 		'TURNS' => self::TURNS,
 		'grade' => new Grade,
-		'campus' => $campus
+		'campus' => $campus,
+		'bloco' => $bloco,
+		'sala' => $sala
 	]);
 }
 
