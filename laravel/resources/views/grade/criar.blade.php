@@ -1,6 +1,6 @@
-@extends('base')
+@extends('menu')
 
-@section('titulo', 'Cadastro de Grade')
+@section('titulo', 'Sistema de Localizacao - Cadastro de Grade')
 
 @section('conteudo')
 <div id="main" class="container-fluid">
@@ -38,9 +38,8 @@
       ['class' => 'col-md-2 control-label']
     )}}
     <div class="col-md-4">
-      {{Form::select(
+      {{Form::text(
         'curso',
-        ['' => 'Selecione um Curso'],
         null,
         ['class' => 'form-control col-md-4']
       )}}
@@ -53,9 +52,8 @@
       ['class' => 'col-md-2 control-label']
     )}}
     <div class="col-md-4">
-      {{Form::select(
+      {{Form::text(
         'disciplina',
-        ['' => 'Selecione uma Disciplina'],
         null,
         ['class' => 'form-control col-md-4']
       )}}
@@ -110,7 +108,7 @@
     <div class="col-md-4">
       {{Form::select(
         'campus',
-        ['' => 'Selecione um Campus'],
+        $campus,
         null,
         ['class' => 'form-control col-md-4']
       )}}
@@ -125,7 +123,7 @@
     <div class="col-md-4">
       {{Form::select(
         'bloco',
-        ['' => 'Selecione um Bloco'],
+        $bloco,
         null,
         ['class' => 'form-control col-md-4']
       )}}
@@ -139,7 +137,8 @@
     )}}
     <div class="col-md-4">
       {{Form::select(
-        'sala', ['' => 'Selecione uma Sala'],
+        'sala',
+        $sala,
         null,
         ['class' => 'form-control col-md-4']
       )}}
@@ -148,7 +147,7 @@
     <div class="col-md-12">
       {{Form::submit('Salvar', ['class' => 'btn btn-success'])}}
       {{Form::reset('Limpar', ['class' => 'btn btn-warning'])}}
-      <a href="{{ url('/') }}" class="btn btn-danger">Cancelar</a>
+      <a href="{{ url('/grade/listar') }}" class="btn btn-danger">Cancelar</a>
     </div>
 
   {{Form::close()}}

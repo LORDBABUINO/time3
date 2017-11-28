@@ -20,9 +20,13 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/grade', 'CadastroGradeController@index')->name('grade');
-Route::post('/grade/salvar', 'CadastroGradeController@store');
-
+Route::group(['prefix' => 'grade'], function () {
+	Route::get('criar',"GradeController@criar");
+	Route::get('listar',"GradeController@listar");
+	Route::get('editar/{id}',"GradeController@editar");
+	Route::get('remover/{id}',"GradeController@remover");
+	Route::post('salvar',"GradeController@salvar");
+});
 
 
 //Route::get('/curso/criar', function () {
@@ -66,4 +70,3 @@ Route::get('/rota', 'RotaController@index')->name('rota');
 
 Route::get('/cadastrarsala', function () {
     return view('/cadastrarsala');});
-

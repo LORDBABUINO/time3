@@ -181,7 +181,7 @@
                         <li><a href="bloco">Bloco</a></li>
                         <li><a href="salas/cadastro">Salas</a></li>
                         <li><a href="rota">Rota</a></li>
-                        <li><a href="grade">Grade</a></li>
+                        <li><a href="{{ url('/grade/listar') }}">Grade</a></li>
 
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
@@ -205,10 +205,10 @@
                                 </li>
 
                             </ul>
-                            
+
                              <li><a href="{{ url('/') }}">Inicio</a></li>
                         </li>
-                        
+
                     </ul>
                     @endif
 
