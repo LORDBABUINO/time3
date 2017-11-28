@@ -16,7 +16,7 @@
   @endif
 
   {{Form::open(['url' => '/grade/salvar', 'class' => 'form-horizontal'])}}
-
+  {!! csrf_field()!!}
   <div class="form-group">
     {{Form::label(
       'semestre',

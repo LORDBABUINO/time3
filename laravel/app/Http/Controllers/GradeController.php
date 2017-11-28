@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 
 use App\Http\Requests;
 use App\Grade;
-use App\Http\Requests\GradeRequests;
+use App\Http\Requests\GradeRequest;
 
 class GradeController extends Controller{
 
@@ -71,7 +71,7 @@ public function remover($id){
   return redirect ('grade/listar');
 }
 
-public function salvar(GradeRequests $request){
+public function salvar(GradeRequest $request){
 
 	$grade = new Grade();
 	if ($request->id) {
