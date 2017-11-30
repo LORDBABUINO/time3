@@ -70,7 +70,7 @@
         <div class="col-sm-2">
           {{Form::label($value, $label . ':')}}
           {{Form::checkbox(
-            'grade',
+            'dia',
             $value,
             null,
             ['id' => $value])

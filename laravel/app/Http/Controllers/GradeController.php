@@ -78,14 +78,14 @@ public function salvar(GradeRequest $request){
 		$grade=Grade::find($request->id);
 	}
 
-	$grade->grade_semestre = $request->grade_semestre;
-	$grade->grade_curso = $request->grade_curso;
-	$grade->grade_disciplina = $request->grade_disciplina;
-	$grade->grade_dia= $request->grade_dia;
-	$grade->grade_turnos = $request->grade_turnos;
-	$grade->grade_campus = $request->grade_campus;
-	$grade->grade_bloco = $request->grade_bloco;
-	$grade->grade_sala = $request->grade_sala;
+	$grade->grade_semestre = $request->semestre;
+	$grade->grade_curso = $request->curso;
+	$grade->grade_disciplina = $request->disciplina;
+	$grade->grade_dia= $request->dia;
+	$grade->grade_turnos = $request->turnos;
+	$grade->grade_campus = $request->campus;
+	$grade->grade_bloco = $request->bloco;
+	$grade->grade_sala = $request->sala;
 	$grade->save();
 
 	return redirect('grade/listar');

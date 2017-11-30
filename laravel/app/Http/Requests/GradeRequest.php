@@ -27,7 +27,7 @@ class GradeRequest extends FormRequest
           'semestre' => 'required|max:2',
           'curso' => 'required',
           'disciplina' => 'required',
-          'grade' => 'required',
+          'dia' => 'required',
           'turnos' => 'required',
           'campus' => 'required',
           'bloco' => 'required',
