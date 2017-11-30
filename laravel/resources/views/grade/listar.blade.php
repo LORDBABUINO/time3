@@ -38,7 +38,7 @@
               <td>{{$grade->grade_sala}}</td>
               <td>
                 <a class="btn btn-warning btn-xs" href="/grade/editar/<?php echo $grade->id; ?>">Editar</a>
-                <a class="btn btn-danger btn-xs" href="/grade/remover/<?php echo $grade->id; ?>" onclick="return confirm('Deseja remover o Campus <?php echo $campuss->curso_nome; ?>?');">Remover</a>
+                <a class="btn btn-danger btn-xs" href="/grade/remover/<?php echo $grade->id; ?>" onclick="return confirm('Deseja remover a disciplina <?php echo$grade->grade_disciplina; ?>?');">Remover</a>
               </td>
             </tr>
             @endforeach
