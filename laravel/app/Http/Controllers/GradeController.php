@@ -25,9 +25,25 @@ class GradeController extends Controller{
 		'Noturno' => 'noturno',
 	];
 
+	protected $campus;
+	protected $bloco;
+	protected $sala;
+
 public function __contruct(){
 
 	$this->middleware('auth');
+}
+
+protected function atualizaComboBox(){
+	$this->campus = collect(['' => 'Selecione um Campus'])->merge(
+		DB::table('campuss')->pluck('campus_nome', 'id')
+	);
+	$this->bloco = collect(['' => 'Selecione um Bloco'])->merge(
+		DB::table('blocos')->pluck('nome', 'id')
+	);
+	$this->sala = collect(['' => 'Selecione uma Sala'])->merge(
+		DB::table('salas')->pluck('nome', 'id')
+	);
 }
 
 public function listar(){
@@ -37,30 +53,31 @@ public function listar(){
 
 public function criar(){
 
-	$campus = collect(['' => 'Selecione um Campus'])->merge(
-		DB::table('campuss')->pluck('campus_nome', 'id')
-	);
-	$bloco = collect(['' => 'Selecione um Bloco'])->merge(
-		DB::table('blocos')->pluck('nome', 'id')
-	);
-	$sala = collect(['' => 'Selecione uma Sala'])->merge(
-		DB::table('salas')->pluck('nome', 'id')
-	);
+	$this->atualizaComboBox();
 
 	return view('grade/criar',
 	[
 		'WEEK' => self::WEEK,
 		'TURNS' => self::TURNS,
 		'grade' => new Grade,
-		'campus' => $campus,
-		'bloco' => $bloco,
-		'sala' => $sala
+		'campus' => $this->campus,
+		'bloco' => $this->bloco,
+		'sala' => $this->sala
 	]);
 }
 
 public function editar($id){
 
-	return view('grade/editar', ['grade'=>Grade::find($id)]);
+	$this->atualizaComboBox();
+	
+	return view('grade/editar', [
+		'WEEK' => self::WEEK,
+		'TURNS' => self::TURNS,
+		'grade'=> Grade::find($id),
+		'campus' => $this->campus,
+		'bloco' => $this->bloco,
+		'sala' => $this->sala
+	]);
 }
 
 public function remover($id){

@@ -1,6 +1,6 @@
 @extends('menu')
 
-@section('titulo', 'Sistema de Localizacao - Cadastro de Cumpus')
+@section('titulo', 'Sistema de Localizacao - Cadastro de Campus')
 
 @section('conteudo')
 
@@ -32,28 +32,28 @@
                 <label class="col-md-2 control-label" for="textinput">Logradouro</label>
                 <div class="col-md-4">
                     <input name="campus_logradouro" type="text" value="{{$campus->campus_logradouro}}" class="form-control input-md" required="">
-                    
+
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-md-2 control-label" for="textinput">Complemento</label>
                 <div class="col-md-4">
                     <input name="campus_complemento" type="text" value="{{$campus->campus_complemento}}" class="form-control input-md" required="">
-                    
+
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-md-2 control-label" for="textinput">Cidade</label>
                 <div class="col-md-4">
                     <input name="campus_cidade" type="text" value="{{$campus->campus_cidade}}" class="form-control input-md" required="">
-                    
+
                 </div>
-                
+
                 <div class="form-group">
                 <label class="col-md-2 control-label" for="textinput">UF</label>
                 <div class="col-md-2">
                     <select name="campus_uf" class="form-control">
-                       
+
                                 <option value="AC" @if($campus->campus_uf == "AC") {{"selected"}} @endif> Acre</option>
                                 <option value="AL" @if($campus->campus_uf == "AL") {{"selected"}} @endif> Alagoas</option>
                                 <option value="AP" @if($campus->campus_uf == "AP") {{"selected"}} @endif>Amapá</option>
@@ -82,13 +82,13 @@
                                 <option value="SE" @if($campus->campus_uf == "Se") {{"selected"}} @endif>Sergipe</option>
                                 <option value="TO" @if($campus->campus_uf == "TO") {{"selected"}} @endif>Tocantins</option>
                     </select>
-                    
+
                 </div>
             </div>
-            
+
         </fieldset>
 
-        
+
 
         <div class="row">
             <div class="col-md-12">
