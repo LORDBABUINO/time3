@@ -33,9 +33,9 @@
               <td>{{$grade->grade_disciplina}}</td>
               <td>{{$grade->grade_dia}}</td>
               <td>{{$grade->grade_turnos}}</td>
-              <td>{{$grade->grade_campus}}</td>
-              <td>{{$grade->grade_bloco}}</td>
-              <td>{{$grade->grade_sala}}</td>
+              <td>{{$campus[$grade->grade_campus]}}</td>
+              <td>{{$bloco[$grade->grade_bloco]}}</td>
+              <td>{{$sala[$grade->grade_sala]}}</td>
               <td>
                 <a class="btn btn-warning btn-xs" href="/grade/editar/<?php echo $grade->id; ?>">Editar</a>
                 <a class="btn btn-danger btn-xs" href="/grade/remover/<?php echo $grade->id; ?>" onclick="return confirm('Deseja remover a disciplina <?php echo$grade->grade_disciplina; ?>?');">Remover</a>

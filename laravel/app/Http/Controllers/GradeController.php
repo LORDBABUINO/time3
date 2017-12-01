@@ -22,7 +22,7 @@ class GradeController extends Controller{
 	];
 	const TURNS = [
 		'Matutino' => 'matutino',
-		'Noturno' => 'noturno',
+		'Noturno' => 'noturno'
 	];
 
 	protected $campus;
@@ -48,7 +48,15 @@ protected function atualizaComboBox(){
 
 public function listar(){
 
-	return view('grade/listar', ['grades'=>Grade::all()]);
+	$this->atualizaComboBox();
+
+	return view('grade/listar',
+	[
+		'grades'=>Grade::all(),
+		'campus'=>$this->campus,
+		'bloco'=>$this->bloco,
+		'sala'=>$this->sala
+	]);
 }
 
 public function criar(){
@@ -69,7 +77,7 @@ public function criar(){
 public function editar($id){
 
 	$this->atualizaComboBox();
-	
+
 	return view('grade/editar', [
 		'WEEK' => self::WEEK,
 		'TURNS' => self::TURNS,
@@ -108,6 +116,4 @@ public function salvar(GradeRequest $request){
 	return redirect('grade/listar');
 
 	}
-
-
 }
